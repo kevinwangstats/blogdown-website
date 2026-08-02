@@ -22,11 +22,8 @@ if [ "$(pwd)" == "$source_code_repo" ]; then
 
   ls  # List contents for verification
 
-  echo "Pushing public site to kevinwangstats"
+  echo "Pushing public site to kevinwangstats (triggers Cloudflare Pages build)"
   git push kws master || { echo "Git push to kws failed. Exiting."; exit 1; }
-
-  echo "Pushing public site to kevinwang09"
-  git push kw9 master || { echo "Git push to kw9 failed. Exiting."; exit 1; }
 
   echo "Pushing source code to kevinwangstats"
   cd "$source_code_repo" || { echo "Failed to change back to source repo. Exiting."; exit 1; }
@@ -44,3 +41,4 @@ else
   echo "Wrong blogdown path. Exiting program."
   exit 1
 fi
+
