@@ -32,13 +32,11 @@ if [ "$(pwd)" == "$source_code_repo" ]; then
 
   git push kws master || { echo "Git push of source repo to kws failed. Exiting."; exit 1; }
 
-  echo "Pushing source code to kevinwang09"
-  git push kw9 master || { echo "Git push of source repo to kw9 failed. Exiting."; exit 1; }
-
   echo "Completed updates. Exiting program."
 
 else
   echo "Wrong blogdown path. Exiting program."
   exit 1
 fi
+
 
